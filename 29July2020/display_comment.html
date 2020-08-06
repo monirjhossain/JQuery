@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery post() Demo</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("form").submit(function(event){
+
+        // Stop form from submitting normally
+        event.preventDefault();
+        
+        /* Serialize the submitted form control values to be sent to the web server with the request */
+        var formValues = $(this).serialize();
+        
+        // Send the form data using post
+        $.post("display_comment_result.php", formValues, function(data){
+            
+             //Display the returned data in browser
+            $("#result").html(data);
+        });
+    });
+});
+</script>
+</head>
+<body>
+    <form>
+        <label>Name:</label><br>
+        <input type="text" name="name"><br>
+        <label>Comment:</label><br>
+        <textarea cols="50" name="comment"></textarea><br>
+        <input type="submit" value="Send">
+    </form>
+    <div id="result"></div>
+</body>
+</html>

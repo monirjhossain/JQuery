@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Slide</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<style>
+		.btn{
+			width: 500px;
+			background: #333;
+			color: #fff;
+			text-align: center;
+			padding: 10px;
+			font-size: 20px;	
+			margin: auto;
+			margin-top: 50px;
+
+	
+		}
+		.lorem{
+			width: 500px;
+			background: #000;
+			color: #fff;
+			text-align: center;
+			padding: 10px;
+			margin: auto;
+			
+			
+		}
+	</style>
+</head>
+<body>
+	<!--slideDown | slideUp | slideToggle-->
+	<script>
+		$(document).ready(function(){
+			$(".btn").click(function(){
+				$(".lorem").slideUp(500);
+			});
+		});
+	</script>
+
+	<div class="btn">Click Here</div>
+	<div class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, atque reprehenderit ducimus consectetur modi labore, corporis fugit veniam quia ab.</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery AJAX mySQL insert</title>
+</head>
+<body>
+	<form id="MyForm" method="post">
+		<input type="text" name="fName" placeholder="Firstname"><br>
+		<input type="text" name="lName" placeholder="Lastname"><br>
+		<input type="submit" value="Submit">
+	</form>
+
+	<div id="show"></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#MyForm').submit(function(e){
+				e.preventDefault();
+				var data = $(this).serialize();
+				$.ajax({
+					url: 'process.php',
+					type: 'post',
+					data: data,
+					cache: false,
+        			dataType: "JSON",
+					success: function(){
+						$('#show').html('Congrats! Successfully inserted!');
+						console.log(data);
+					},
+					error: function(){
+						$('#show').html('Sorry! Failed to insert!');
+					}
+				});
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Attribute selection</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<!--You can hide or show attribute-->
+	<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				var x = $("[href]").text();
+				alert(x);
+			});
+			
+		});
+	</script>
+	<button>Click here</button>
+	<a href="https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_sel_hrefattrblank">W3School</a>
+</body>
+</html>

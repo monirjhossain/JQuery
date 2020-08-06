@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#check").click(function(){
+				var office_code = $("#offices").val();
+				$.ajax({
+					url: 'process.php',
+					data: {OfficeCode: office_code},
+					success: function (res) {
+					$('#show').html(res);
+				}});
+			});
+		});
+	</script>
+</head>
+<body>
+	<select name="offices" id="offices">
+		<option value="" disabled selected>Select office</option>
+		<option value="1">Dhanmondi</option>
+		<option value="2">Mirpur</option>
+		<option value="3">Motijheel</option>
+		<option value="4">Narayanganj</option>
+	</select>
+	<input type="button" id="check" value="Show Result" >
+
+	<div id="show"></div>
+</body>
+</html>

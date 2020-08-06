@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("#myid").load("textfile.txt");
+			});
+			
+		});
+	</script>
+	<button>Show data</button>
+	<div id="myid">Here data will be show</div>
+</body>
+</html>

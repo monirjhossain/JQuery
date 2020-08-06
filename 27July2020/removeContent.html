@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Attribute selection</title>
+	<script src="js/jquery.min.js"></script>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<h1>Empty and Remove</h1>
+	<script>
+		jQuery(document).ready(function(){
+			$("#btn1").click(function(){
+				$("#para1").remove();
+			});
+			$("#btn2").click(function(){
+				$("#para1").empty();
+			});
+	
+		});
+	</script>
+
+	<div id="para1" style="height: 120px; width: 400px; background-color: yellow; border: 2px solid; overflow: ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid doloremque pariatur voluptatibus, dicta voluptatem, tempore! Praesentium nisi debitis, iure corrupti.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid doloremque pariatur voluptatibus, dicta voluptatem, tempore! Praesentium nisi debitis, iure corrupti.</div>
+	
+
+		<button id="btn1">Click here 1</button>
+		<button id="btn2">Click here 2</button>
+		
+		
+</body>
+</html>

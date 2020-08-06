@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Attribute selection</title>
+	<script src="js/jquery.min.js"></script>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<h1>text, html, val </h1>
+	<script>
+		jQuery(document).ready(function(){
+			$("#btn1").click(function(){
+				$("#para1").text("Amena");
+			});
+			$("#btn2").click(function(){
+				$("#para2").html("Zara");
+			});
+			$("#btn3").click(function(){
+				$("#val1").val("Minar");
+			})
+		});
+	</script>
+
+	<p id="para1">Monir</p>
+	<p id="para2">Shain</p>
+	<p><input type="text" id="val1" value="Masum"></p>
+
+		<button id="btn1">Click here 1</button>
+		<button id="btn2">Click here 2</button>
+		<button id="btn3">Click here 3</button>
+		
+</body>
+</html>

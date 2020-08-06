@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Attribute selection</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style>
+		.mystye{
+			font-size: 20px;
+			color: #fff;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<!--You can select first and last -->
+	<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("p:last").addClass("mystye");
+			})
+			
+	});
+	</script>
+		<button>Click here</button>
+
+		<p>This is first paragraph</p>
+		<p>This is second paragraph</p>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fade In</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+	<style>
+		.box1{
+			height: 100px;
+			width: 100px;
+			background-color: red;
+			margin-top: 10px;
+			
+		}
+		.box2{
+			height: 100px;
+			width: 100px;
+			background-color: green;
+			margin-top: 10px;
+			
+		}
+		.box3{
+			height: 100px;
+			width: 100px;
+			background-color: blue;
+			margin-top: 10px;
+			
+		}
+	</style>
+</head>
+<body>
+	<!--FadeIn, fadeOut, fadeTo-->
+	<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				$(".box1").fadeTo(1000, 0.3);
+				$(".box2").fadeTo(2000, 0.7);
+				$(".box3").fadeTo(3000, 0.9);
+			})
+		});
+	</script>
+
+	<button>Click here</button>
+
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+</body>
+</html>

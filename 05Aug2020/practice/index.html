@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Data inserted</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<script>
+		$(documet).ready(function(){
+			$(#submit).click(function(){
+				$.ajax({
+					url : "proccess.php",
+					type : "POST",
+					success : 
+				})
+			})
+		});
+	</script>
+
+	<form action="">
+		<input type="text" name="fname" placeholder="Write the first name"><br>
+		<input type="text" name="lname" placeholder="Write the last name"><br>
+		<input type="submit" id="submit" value="Submit">
+		<div id="show"></div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hide Show </title>
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$("#hide").click(function(){
+				$("p").hide('slow');
+			});
+			$("#show").click(function(){
+				$("p").show('slow');
+			});
+		});
+	</script>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur error nobis, sequi, totam ullam doloremque esse ad vel perspiciatis accusantium!</p>
+
+	<button id="hide">Hide</button>
+	<button id="show">Show</button>
+</body>
+</html>

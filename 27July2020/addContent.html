@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Attribute selection</title>
+	<script src="js/jquery.min.js"></script>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<h1>text, html, val </h1>
+	<script>
+		jQuery(document).ready(function(){
+			$("#btn1").click(function(){
+				$("#para1").append(" Amena ");
+			});
+			$("#btn2").click(function(){
+				$("#para2").prepend(" Zara ");
+			});
+			$("#btn3").click(function(){
+				$("#para3").after(" Minar ");
+			})
+			$("#btn4").click(function(){
+				$("#para4").before(" Raju ");
+			})
+		});
+	</script>
+
+	<p id="para1">Monir</p><br>
+	<p id="para2">Shain</p><br>
+	<p id="para3">Moshiur</p><br>
+	<p id="para4">Nazmul</p><br>
+
+
+		<button id="btn1">Click here 1</button>
+		<button id="btn2">Click here 2</button>
+		<button id="btn3">Click here 3</button>
+		<button id="btn4">Click here 3</button>
+		
+</body>
+</html>

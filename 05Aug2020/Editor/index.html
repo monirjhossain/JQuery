@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>getScript example</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function (){
+		$('input:button:first').click(function(aaa){
+		$.getScript('new.js', function(){
+		alert('Script loaded');
+		addEvents();
+		});
+	});
+});
+</script>
+</head>
+<body>
+<p id="container">
+This text will be replaced with new text.
+</p>
+<input type="button" class="loader" value="Load Script"/>
+<input type="button" class="bold" value="Bold"/>
+<input type="button" class="color" value="Change color"/>
+<input type="button" class="change" value="Change text"/>
+</script>
+</body>
+</html>

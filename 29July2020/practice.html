@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery get() Demo</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        var name = $("#name").val();
+        var address = $("#email").val();
+        var phone = $("#phone").val();
+        $.get("practice_result.php", {name: name, address: address, phone: phone} , function(data){
+            $("#result").html(data);
+        });
+    });
+});
+</script>
+</head>
+<body>
+    <label>Name</label><br>
+    <input type="text" id="name" placeholder="Write your name"><br>
+    <label>Email</label><br>
+    <input type="email" id="email" placeholder="Write your email"><br>
+    <label>Phone</label><br>
+    <input type="text" id="phone" placeholder="Write your Phone number"><br>
+    <button type="button">Submit</button><br>
+    <div id="result"></div>
+</body>
+</html>

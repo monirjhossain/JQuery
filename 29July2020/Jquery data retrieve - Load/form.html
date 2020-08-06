@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+         $(document).ready(function() {
+            $("#driver").click(function(event){
+               var offcode = $("#office").val();
+
+               $("#stage").load('employee.php', {office:offcode} );
+            });
+         });
+      </script>
+</head>
+<body>
+  <p>Select any Office:</p>
+  <select name="" id="office">
+    <option value="" disabled selected>Select One</option>
+    <option value="1">Dhanmondi</option>
+    <option value="2">Mirpur</option>
+    <option value="3">Motijheel</option>
+    <option value="4">Narayanganj</option>
+  </select>
+  <div id = "stage" style = "background-color:cc0;">
+        STAGE
+  </div>
+  <input type = "button" id = "driver" value = "Show Result" />
+</body>
+</html>

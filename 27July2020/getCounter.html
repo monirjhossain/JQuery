@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Attribute selection</title>
+	<script src="js/jquery.min.js"></script>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<h1>text, html, val </h1>
+	<script>
+		jQuery(document).ready(function(){
+			jQuery("button").click(function(){
+				var x = jQuery("#para1").html()
+				var y = jQuery("#para1").text()
+			alert(x);
+			
+			});
+			jQuery("button").click(function(){
+				var x = jQuery("name").html()
+			alert(x);
+			
+			});
+		});
+	</script>
+		<button class="btn1">Click here</button>
+		<p id="para1"><strong></strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sed excepturi, numquam consequatur? Ea nobis nemo, quia eius dicta quos.</strong></p>
+		<button class="btn2">Chick here to input</button>
+		<input type="text" id="name" value="">
+</body>
+</html>

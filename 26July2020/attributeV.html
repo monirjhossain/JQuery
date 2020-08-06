@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Attribute selection</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<!--You can hide or show attribute-->
+	<script>
+		$(document).ready(function(){
+			$("#img1").hover(function(){
+				$("img").attr({
+				src:"jony1.jpg"
+
+			});
+		});
+			
+	});
+	</script>
+		<img src="jony.jpg" alt="" height="500" id="img1">
+
+</body>
+</html>
