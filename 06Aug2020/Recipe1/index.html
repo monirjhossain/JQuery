@@ -1,0 +1,53 @@
+<html>
+<head lang="en">
+ <title>Add rows dynamically</title>
+ <meta charset="utf8">
+<style type="text/css">
+fieldset{width:450px;}
+ ul{padding:2px;list-style:none;}
+label{float:left;width:100px;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function (){
+		$('#add').click(function(){
+		var str = '<li>'
+		str+= '<label>Name</label><input type="text" name="sites[]" value=""/> ';
+		str+= '<input type="button"  value="remove" class="remove"/>';
+		str+= '</li>';
+		$('#sites').append(str);
+		});
+
+		$('.remove').on('click', function(){
+			$(this).parent('li').remove();
+		});
+
+		$("#send").click(function(){
+			$.ajax({
+				url: 'process.php',
+				type: 'post',
+				data: $("form").serialize(),
+				success: function(data){
+					$("#show").html(data)
+				}
+			});
+		})
+	});
+</script>
+</head>
+<body>
+<form>
+<fieldset>
+<legend>Websites you visit daily</legend>
+<ul id="sites">
+<li>
+ <label>Name</label><input type="text" name="sites[]" value=""/>
+</li>
+</ul>
+ <input type="button" id="add" value="Add More"/>
+</fieldset>
+<input type="button" id="send" value="SEND">
+</form>
+<div id="show"></div>
+ </body>
+</html>
